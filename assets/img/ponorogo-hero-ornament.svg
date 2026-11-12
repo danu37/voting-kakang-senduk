@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Ornamen Kipas Merak & Motif Geometris Budaya Ponorogo (Gold Line Art) -->
+  <g opacity="0.22" stroke="#D4AF37" stroke-width="1.25">
+    <path d="M580 560 C580 340, 740 160, 790 90" />
+    <path d="M560 560 C530 330, 650 130, 720 40" />
+    <path d="M540 560 C470 330, 540 110, 610 10" />
+    <path d="M520 560 C410 340, 420 120, 480 10" />
+    <path d="M500 560 C350 360, 310 160, 340 40" />
+    <path d="M480 560 C300 390, 220 220, 210 110" />
+    <path d="M460 560 C260 430, 150 300, 110 210" />
+  </g>
+  <g opacity="0.16" stroke="#D4AF37" stroke-width="1.2">
+    <circle cx="540" cy="420" r="180" stroke-dasharray="6 8" />
+    <circle cx="540" cy="420" r="260" stroke-dasharray="3 9" />
+    <circle cx="540" cy="420" r="340" stroke-dasharray="10 12" />
+  </g>
+  <!-- Titik aksen motif batik Ponorogo -->
+  <g fill="#D4AF37" opacity="0.28">
+    <circle cx="720" cy="110" r="4" />
+    <circle cx="635" cy="65" r="4" />
+    <circle cx="525" cy="52" r="4" />
+    <circle cx="405" cy="75" r="4" />
+    <circle cx="295" cy="135" r="4" />
+    <circle cx="205" cy="220" r="4" />
+  </g>
+</svg>
+

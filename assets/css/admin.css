@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Stylesheet Dashboard & Manajemen Administrator
+   Tema: Deep Green Sidebar + Emerald Green & Gold Accents
+   ========================================================================== */
+
+.admin-shell {
+    min-height: 100vh;
+    background-color: var(--ks-bg);
+}
+
+.admin-sidebar {
+    width: 264px;
+    background-color: var(--ks-dark);
+    color: #FFFFFF;
+    flex-shrink: 0;
+    border-right: 2px solid rgba(212, 175, 55, 0.35);
+}
+
+@media (min-width: 992px) {
+    .admin-sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.78);
+    border-radius: 10px;
+    padding: 0.65rem 0.95rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.admin-sidebar .nav-link:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.admin-sidebar .nav-link.active {
+    background-color: var(--ks-primary);
+    color: #FFFFFF;
+    border-left: 3px solid var(--ks-accent);
+}
+
+.admin-topbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--ks-border);
+}
+
+.admin-stat-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--ks-border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 10px rgba(2, 44, 34, 0.03);
+    height: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.admin-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.admin-thumb-4x5 {
+    width: 46px;
+    height: 58px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+    border: 1px solid var(--ks-border);
+    background-color: #EFF5F1;
+    flex-shrink: 0;
+}
+
+.admin-preview-4x5 {
+    width: 180px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    border: 1px solid var(--ks-border);
+    background-color: #EFF5F1;
+}
+
+.admin-chart-wrap {
+    position: relative;
+    height: 290px;
+    width: 100%;
+}
+
+.admin-panel-card {
+    background-color: var(--ks-surface);
+    border: 1px solid var(--ks-border);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(2, 44, 34, 0.03);
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.ks-badge-kakang {
+    background-color: rgba(4, 120, 87, 0.12);
+    color: var(--ks-secondary);
+    border: 1px solid rgba(4, 120, 87, 0.25);
+}
+
+.ks-badge-senduk {
+    background-color: rgba(212, 175, 55, 0.16);
+    color: #856404;
+    border: 1px solid rgba(212, 175, 55, 0.42);
+}
+
+.ks-progress {
+    height: 8px;
+    background-color: #E2E8F0;
+    border-radius: 999px;
+}
+
+.ks-progress-bar {
+    background-color: var(--ks-primary);
+    border-radius: 999px;
+}
+
+.ks-empty-state {
+    border: 1px dashed #CBD5E1;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    padding: 2.25rem 1.25rem;
+    text-align: center;
+}
+
+.pagination .page-link {
+    color: var(--ks-primary);
+    border-color: var(--ks-border);
+    border-radius: 8px;
+}
+
+.pagination .page-link:hover {
+    background-color: rgba(4, 120, 87, 0.08);
+    color: var(--ks-secondary);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    color: #FFFFFF;
+}

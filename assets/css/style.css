@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Voting Pemilihan Kakang Senduk Ponorogo - Stylesheet Utama
+   Identitas Visual: Emerald Green, Forest Green, Deep Green & Gold
+   ========================================================================== */
+
+:root {
+    --ks-primary: #047857;
+    --ks-primary-hover: #065F46;
+    --ks-secondary: #064E3B;
+    --ks-dark: #022C22;
+    --ks-accent: #D4AF37;
+    --ks-accent-soft: rgba(212, 175, 55, 0.14);
+    --ks-bg: #F8FAF7;
+    --ks-surface: #FFFFFF;
+    --ks-text: #1E293B;
+    --ks-muted: #64748B;
+    --ks-border: #E5E7EB;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--ks-bg);
+    color: var(--ks-text);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--ks-text);
+    overflow-wrap: anywhere;
+}
+
+/* Tombol & Form */
+.btn-emerald {
+    background-color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-emerald:hover,
+.btn-emerald:focus {
+    background-color: var(--ks-secondary);
+    border-color: var(--ks-secondary);
+    color: #FFFFFF;
+}
+
+.btn-outline-emerald {
+    color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.btn-outline-emerald:hover,
+.btn-outline-emerald:focus {
+    background-color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    color: #FFFFFF;
+}
+
+.text-emerald {
+    color: var(--ks-primary) !important;
+}
+
+.text-gold {
+    color: var(--ks-accent) !important;
+}
+
+.min-w-0 {
+    min-width: 0 !important;
+}
+
+.form-control,
+.form-select {
+    border-color: var(--ks-border);
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+}
+
+.form-select {
+    padding-right: 2.35rem;
+}
+
+.form-select-sm {
+    padding: 0.38rem 2rem 0.38rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--ks-primary);
+    box-shadow: 0 0 0 0.2rem rgba(4, 120, 87, 0.14);
+}
+
+.input-group .btn-toggle-password {
+    border-color: var(--ks-border);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #FFFFFF;
+    color: var(--ks-muted);
+}
+
+.input-group .btn-toggle-password:hover {
+    color: var(--ks-primary);
+    background-color: #F8FAF7;
+}
+
+/* Kartu & Surface */
+.ks-card {
+    background-color: var(--ks-surface);
+    border: 1px solid var(--ks-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(2, 44, 34, 0.05);
+}
+
+/* Halaman Autentikasi */
+.auth-wrapper {
+    min-height: 100vh;
+    background-color: var(--ks-bg);
+    background-image: radial-gradient(rgba(4, 120, 87, 0.045) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.auth-card {
+    background-color: var(--ks-surface);
+    border: 1px solid var(--ks-border);
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(2, 44, 34, 0.06);
+    overflow: hidden;
+}
+
+.auth-brand-panel {
+    background-color: var(--ks-dark);
+    color: #FFFFFF;
+    position: relative;
+    border-bottom: 3px solid var(--ks-accent);
+}
+
+@media (min-width: 992px) {
+    .auth-brand-panel {
+        border-bottom: none;
+        border-right: 3px solid var(--ks-accent);
+    }
+}
+
+.auth-ornament-line {
+    height: 3px;
+    width: 56px;
+    background-color: var(--ks-accent);
+    border-radius: 999px;
+}
+
+.auth-badge-ponorogo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(212, 175, 55, 0.14);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    color: #F3D98B;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.ks-motif-subtle {
+    position: relative;
+}
+
+.ks-motif-subtle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #D4AF37 0,
+        #D4AF37 1px,
+        transparent 1px,
+        transparent 16px
+    );
+}
+
+.ks-link-accent {
+    color: var(--ks-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.ks-link-accent:hover {
+    color: var(--ks-secondary);
+    text-decoration: underline;
+}
+

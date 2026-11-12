@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <rect width="400" height="500" fill="#EFF5F1" />
+  <circle cx="200" cy="185" r="68" fill="#CBE3D7" />
+  <path d="M90 420 C90 328, 310 328, 310 420" fill="#CBE3D7" />
+  <rect x="24" y="24" width="352" height="452" rx="12" stroke="#D4AF37" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="6 6" />
+  <text x="200" y="458" text-anchor="middle" fill="#064E3B" font-family="sans-serif" font-size="14" font-weight="600" opacity="0.75">Foto Kontestan</text>
+</svg>
+

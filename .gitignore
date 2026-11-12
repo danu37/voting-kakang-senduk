@@ -1,0 +1,31 @@
+# Environment & Konfigurasi Lokal / Rahasia
+.env
+.env.*
+!.env.example
+config/config.local.php
+config/production.php
+
+# Log Sistem & Rate Limiter
+storage/logs/*
+!storage/logs/.gitkeep
+
+# Backup Database
+database/backups/*.sql
+database/backups/*.sql.gz
+database/backups/*.zip
+!database/backups/.gitkeep
+
+# File Upload Kontestan Produksi
+uploads/kontestan/*
+!uploads/kontestan/.gitkeep
+
+# Berkas Sementara & Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
+.vscode/
+.idea/
+

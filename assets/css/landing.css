@@ -1,0 +1,477 @@
+/* ==========================================================================
+   Stylesheet Publik & Landing Page Editorial
+   Tema: Budaya & Pariwisata Kabupaten Ponorogo (Emerald Green & Gold)
+   ========================================================================== */
+
+/* Navbar Publik */
+.ks-navbar {
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--ks-border);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.ks-brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: var(--ks-dark);
+    border: 1.5px solid var(--ks-accent);
+    color: var(--ks-accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.ks-nav-link {
+    font-weight: 500;
+    font-size: 0.94rem;
+    color: var(--ks-text);
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 8px;
+    transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.ks-nav-link:hover,
+.ks-nav-link.active {
+    color: var(--ks-primary) !important;
+    background-color: rgba(4, 120, 87, 0.07);
+}
+
+.btn-gold {
+    background-color: var(--ks-accent);
+    border-color: var(--ks-accent);
+    color: #022C22;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+    background-color: #C19B26;
+    border-color: #C19B26;
+    color: #022C22;
+}
+
+/* Hero Section Editorial dengan Visual Budaya Ponorogo */
+.ks-hero {
+    position: relative;
+    background-color: var(--ks-dark);
+    color: #FFFFFF;
+    overflow: hidden;
+    border-bottom: 3px solid var(--ks-accent);
+}
+
+.ks-hero-ornament {
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/ponorogo-hero-ornament.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.ks-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.38rem 0.9rem;
+    border-radius: 999px;
+    background-color: rgba(212, 175, 55, 0.14);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    color: #F3D98B;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.ks-hero-title {
+    color: #FFFFFF;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.ks-hero-subtitle {
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 58ch;
+}
+
+/* Panel Informasi Periode Editorial (Tanpa Banyak Card) */
+.ks-period-panel {
+    background-color: rgba(6, 78, 59, 0.72);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+}
+
+.ks-period-divider {
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Tipografi & Pembatas Editorial */
+.ks-section-py {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+    .ks-section-py {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.ks-section-kicker {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--ks-primary);
+    margin-bottom: 0.5rem;
+}
+
+.ks-editorial-rule {
+    width: 52px;
+    height: 3px;
+    background-color: var(--ks-accent);
+    border-radius: 999px;
+}
+
+.ks-editorial-list-item {
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--ks-border);
+}
+
+.ks-editorial-list-item:first-child {
+    border-top: 1px solid var(--ks-border);
+}
+
+/* Kontestan Card Editorial (Rasio Foto Konsisten 4:5) */
+.ks-contestant-item {
+    background-color: var(--ks-surface);
+    border: 1px solid var(--ks-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ks-contestant-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(2, 44, 34, 0.08);
+    border-color: rgba(4, 120, 87, 0.35);
+}
+
+.ks-contestant-photo-wrap {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    background-color: #EFF5F1;
+    overflow: hidden;
+}
+
+.ks-contestant-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.ks-contestant-item:hover .ks-contestant-photo {
+    transform: scale(1.03);
+}
+
+.ks-contestant-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(2, 44, 34, 0.88);
+    color: #F3D98B;
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+}
+
+.ks-badge-kakang {
+    background-color: rgba(4, 120, 87, 0.12);
+    color: var(--ks-secondary);
+    border: 1px solid rgba(4, 120, 87, 0.25);
+}
+
+.ks-badge-senduk {
+    background-color: rgba(212, 175, 55, 0.16);
+    color: #856404;
+    border: 1px solid rgba(212, 175, 55, 0.42);
+}
+
+/* Langkah Cara Voting (Editorial Timeline Tanpa Card) */
+.ks-step-number {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--ks-dark);
+    color: var(--ks-accent);
+    border: 2px solid var(--ks-accent);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* CTA Klasemen Banner */
+.ks-cta-klasemen {
+    background-color: var(--ks-secondary);
+    color: #FFFFFF;
+    border-top: 1px solid rgba(212, 175, 55, 0.35);
+    border-bottom: 3px solid var(--ks-accent);
+}
+
+/* Detail Foto Konsisten */
+.ks-detail-photo-wrap {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--ks-border);
+    background-color: #EFF5F1;
+}
+
+.ks-detail-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Podium & Klasemen */
+.ks-podium-slot {
+    border: 1px solid var(--ks-border);
+    border-radius: 14px;
+    background-color: var(--ks-surface);
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.ks-podium-rank-1 {
+    border-color: var(--ks-accent);
+    box-shadow: 0 10px 26px rgba(212, 175, 55, 0.14);
+}
+
+.ks-avatar-thumb {
+    width: 44px;
+    height: 55px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+    border: 1px solid var(--ks-border);
+    flex-shrink: 0;
+}
+
+.ks-podium-avatar {
+    width: 84px;
+    height: 105px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    border: 2px solid var(--ks-border);
+    margin: 0 auto 0.75rem;
+    display: block;
+}
+
+.ks-podium-rank-1 .ks-podium-avatar {
+    border-color: var(--ks-accent);
+}
+
+.ks-progress {
+    height: 8px;
+    background-color: #E2E8F0;
+    border-radius: 999px;
+}
+
+.ks-progress-bar {
+    background-color: var(--ks-primary);
+    border-radius: 999px;
+}
+
+/* Empty State */
+.ks-empty-state {
+    border: 1px dashed #CBD5E1;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+/* Footer Publik */
+.ks-footer {
+    background-color: var(--ks-dark);
+    color: rgba(255, 255, 255, 0.78);
+    border-top: 3px solid var(--ks-accent);
+}
+
+.ks-footer-link {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.ks-footer-link:hover {
+    color: var(--ks-accent);
+}
+
+/* Pagination Tema Emerald */
+.pagination .page-link {
+    color: var(--ks-primary);
+    border-color: var(--ks-border);
+    border-radius: 8px;
+}
+
+.pagination .page-link:hover {
+    background-color: rgba(4, 120, 87, 0.08);
+    color: var(--ks-secondary);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Halaman Bilik Suara (pages/voting.php)
+   ========================================================================== */
+.ks-vote-status-card {
+    background-color: var(--ks-surface);
+    border: 1px solid var(--ks-border);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    height: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.ks-vote-status-card.is-done {
+    border-color: rgba(4, 120, 87, 0.35);
+    background-color: #F4FBF7;
+}
+
+.ks-vote-option {
+    background-color: var(--ks-surface);
+    border: 2px solid var(--ks-border);
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.18s ease;
+}
+
+.ks-vote-option:hover {
+    transform: translateY(-3px);
+    border-color: rgba(4, 120, 87, 0.45);
+    box-shadow: 0 10px 24px rgba(2, 44, 34, 0.08);
+}
+
+.ks-vote-option.is-selected {
+    border-color: var(--ks-primary);
+    box-shadow: 0 0 0 4px rgba(4, 120, 87, 0.14), 0 12px 26px rgba(2, 44, 34, 0.1);
+}
+
+.ks-vote-card-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.ks-vote-check-pill {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(255, 255, 255, 0.94);
+    color: var(--ks-text);
+    border: 1px solid var(--ks-border);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.ks-vote-option.is-selected .ks-vote-check-pill {
+    background-color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    color: #FFFFFF;
+}
+
+.ks-vote-option.is-selected .ks-select-btn {
+    background-color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    color: #FFFFFF;
+}
+
+.ks-vote-confirm-bar {
+    background-color: var(--ks-surface);
+    border: 1px solid var(--ks-border);
+    border-left: 4px solid var(--ks-accent);
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(2, 44, 34, 0.07);
+}
+
+.ks-category-tabs {
+    border-bottom: 1px solid var(--ks-border);
+}
+
+.ks-category-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid var(--ks-border);
+    background-color: var(--ks-surface);
+    color: var(--ks-text);
+    font-weight: 600;
+    font-size: 0.94rem;
+    text-decoration: none;
+    transition: all 0.18s ease;
+}
+
+.ks-category-tab:hover {
+    border-color: var(--ks-primary);
+    color: var(--ks-primary);
+    background-color: rgba(4, 120, 87, 0.04);
+}
+
+.ks-category-tab.active {
+    background-color: var(--ks-primary);
+    border-color: var(--ks-primary);
+    color: #FFFFFF;
+    box-shadow: 0 6px 16px rgba(4, 120, 87, 0.18);
+}
+
+@media (min-width: 768px) {
+    .ks-stat-divider {
+        border-left: 1px solid var(--ks-border);
+        padding-left: 1.25rem;
+    }
+}

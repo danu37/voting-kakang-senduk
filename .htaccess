@@ -1,0 +1,44 @@
+# Nonaktifkan directory listing di seluruh aplikasi
+Options -Indexes
+
+# Proteksi file sensitif (pedoman, dokumentasi, konfigurasi, skrip SQL, environment, log)
+<FilesMatch "(?i)^(agents\.md|readme\.md|\.htaccess|\.gitignore|\.env.*)|\.(sql|log|bak|ini|sh|md)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Blokir akses publik ke direktori internal aplikasi & dokumentasi
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(config|app|database|views|storage|docs)(/|$) - [F,L,NC]
+
+    # ==========================================================================
+    # HTTPS Redirect Produksi (Aktifkan di server produksi dengan SSL terpasang)
+    # ==========================================================================
+    # RewriteCond %{HTTPS} !=on
+    # RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+    # RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Kompresi teks/asset untuk mempercepat pemuatan halaman di produksi
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache browser untuk file statis (CSS, JS, SVG, foto kontestan)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+</IfModule>
+

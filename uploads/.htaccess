@@ -1,0 +1,26 @@
+# Nonaktifkan directory listing dan eksekusi script/markup di folder upload
+Options -Indexes -ExecCGI
+
+<IfModule mod_mime.c>
+    RemoveHandler .php .php3 .php4 .php5 .php7 .php8 .phtml .phar .cgi .pl .py
+    RemoveType .php .php3 .php4 .php5 .php7 .php8 .phtml .phar .html .htm .svg .js
+</IfModule>
+
+<IfModule php_module>
+    php_flag engine off
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Blokir seluruh ekstensi script, markup aktif, dan konfigurasi tersembunyi
+<FilesMatch "(?i)\.(php[0-9]?|phtml|phar|pl|py|jsp|asp|aspx|sh|cgi|exe|bat|cmd|html?|xhtml|svg|js|xml|htaccess|env)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
